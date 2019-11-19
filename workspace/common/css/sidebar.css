@@ -28,7 +28,9 @@ aside div{
     list-style: none;
     padding-top : 8%;
     outline:none;
+
 }
+
 #sidebar button {
     background:#F26D0E;
     position: absolute;
@@ -42,3 +44,13 @@ aside div{
     outline:none;
 }
 
+a{
+    color:white;
+    text-decoration: none;
+}
+a:hover {
+    font-size:25pt;
+    text-decoration: none;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
