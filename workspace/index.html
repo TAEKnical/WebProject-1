@@ -3,6 +3,8 @@
 		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
 	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<title>Software Engineering Lab - Notice</title>
 	
 	<link rel="stylesheet" href="./index.css?var=1" type="text/css" />
@@ -11,20 +13,36 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script type="text/javascript">	$(function(){
+
 		var duration = 300;
 
+		var windowWidth = $( window ).width();
 		var $side = $('#sidebar');
+		var background = document.getElementById("background");
+
 		var $sidebt = $side.find('button').on('click', function(){
 			$side.toggleClass('open');
-
 			if($side.hasClass('open')) {
 				$side.stop(true).animate({left:'0px'}, duration);
+				if(window.innerWidth < 1000){
+					background.style.display = 'none';
+				}
 			}else{
 				$side.stop(true).animate({left:'-300px'}, duration);
+				background.style.display = 'block';
 
 			};
 		});
 	});
+	$(function(){
+	    $(window).resize( funcThisSize );
+	    funcThisSize();
+	});
+
+	window.onresize = function(event)
+	{
+		document.location.reload(true);
+	}
 </script>
 
 
