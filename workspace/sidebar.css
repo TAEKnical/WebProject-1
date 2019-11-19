@@ -8,6 +8,7 @@ aside div{
     font-size : 15pt;
     color : white;
     font-weight : bold;
+    float : left;
 }
 
 #sidebar {
@@ -18,6 +19,7 @@ aside div{
     left: -300px;
     position: fixed;
     border-radius : 50px;
+    float : left;
 }
 #sidebar ul{
     padding-top : 20%;
@@ -25,6 +27,7 @@ aside div{
 #sidebar li {
     list-style: none;
     padding-top : 8%;
+    outline:none;
 }
 #sidebar button {
     background:#F26D0E;
@@ -36,5 +39,6 @@ aside div{
     border: none;
     color: white;
     border-radius : 50px;
+    outline:none;
 }
 
