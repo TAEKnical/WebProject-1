@@ -4,13 +4,51 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Software Engineering Lab - Notice</title>
-	<link rel="stylesheet" href="./index.css?var=1" type="text/css" />		
+	
+	<link rel="stylesheet" href="./index.css?var=1" type="text/css" />
+	<link rel="stylesheet" href="./sidebar.css?var=1">
+	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript">	$(function(){
+		var duration = 300;
+
+		var $side = $('#sidebar');
+		var $sidebt = $side.find('button').on('click', function(){
+			$side.toggleClass('open');
+
+			if($side.hasClass('open')) {
+				$side.stop(true).animate({left:'0px'}, duration);
+				$sidebt.find('span').text('< ● ●');
+			}else{
+				$side.stop(true).animate({left:'-300px'}, duration);
+				$sidebt.find('span').text('● ● >');
+			};
+		});
+	});
+</script>
+
+
 </head>
 
 <body>
-	<header>
-		<div id="header__square">● ● ●</div>
-	</header>
+	<aside id="sidebar">
+		<div>
+			<ul>
+				<li>Login</li>
+				<br><br>
+				<li>Notice</li>
+				<li>RESEARCH</li>
+				<li>PUBLICATIONS</li>
+				<li>COURSES</li>
+				<li>GALLERY</li>
+				<li>QnA</li>
+				<li>CONTACT</li>
+			</ul>
+		<button>● ● ></button>
+	</aside>
+
+
 	<div id=background>
 		<p>Welcome to Software Engineering Laboratory!</p>
 		<img src=./common/images/selab_logo_S.png>

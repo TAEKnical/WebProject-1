@@ -18,16 +18,3 @@ body{
 	font-style: bold;
 	font-family: sans-serif;
 }
-
-#header__square {
-    background-color: #F26D0E;
-    height: 50px;
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 10px;
-    margin-right: 20px;
-    opacity:0.9;
-}

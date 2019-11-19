@@ -1,0 +1,40 @@
+aside div{
+    width : 85%;
+    height : 80%;
+    margin-top : 30%;
+    margin-left : 7%;
+    background-color: #F26D0E;
+    border-radius : 50px;
+    font-size : 15pt;
+    color : white;
+    font-weight : bold;
+}
+
+#sidebar {
+    background-color: white;
+    width: 300px;
+    height: 100%;
+    top: 0;
+    left: -300px;
+    position: fixed;
+    border-radius : 50px;
+}
+#sidebar ul{
+    padding-top : 20%;
+}
+#sidebar li {
+    list-style: none;
+    padding-top : 8%;
+}
+#sidebar button {
+    background:#F26D0E;
+    position: absolute;
+    top: 150px;
+    left: 300px;
+    width: 52px;
+    height: 52px;
+    border: none;
+    color: white;
+    border-radius : 50px;
+}
+
