@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<title>Login page</title>
-	<link rel="stylesheet" href="./css/login.css?var=1" type="text/css" />
+	<link rel="stylesheet" href="./css/signup.css?var=1" type="text/css" />
 	<link rel="stylesheet" href="../common/css/sidebar.css?var=1">
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -29,12 +29,13 @@
 				<li><a href="../qna/qna.html">QnA</a></li>
 				<li><a href="../login/login.html">CONTACT</a></li>
 			</ul>
+		</div>
 		<button>● ● ●</button>
 	</aside>
 
-	<div class=box>
+	<article>
 		<div class="container">
-			<h1>Login</h1>
+			<h1>Sign up</h1>
 			
 			<div class="label">아이디</div>
 			<div class="form">
@@ -45,11 +46,20 @@
 			<div class="form">
 				<input type="password" id="pw" placeholder="PW"/>
 			</div>
-			<br>
-			<input id="signup" type="submit" vlaue="login"/>
-			<a href="./signup.html"><button id="signup">회원가입</button></a>
+
+			<div class="label">이름</div>
+			<div class="form">
+				<input type="text" id="name" placeholder="NAME"/>
+			</div>
+
+			<div class="label">이메일</div>
+			<div class="form">
+				<input type="text" id="email" placeholder="EMAIL"/>
+			</div>
+
+			<button id="signup">가입하기</button>
 		</div>
-	</div>
+	</article>
 
 
 

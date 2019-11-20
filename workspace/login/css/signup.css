@@ -54,6 +54,13 @@ h1{
 
 }
 
+#boxtitle{
+	text-align: center;
+	color : #F26D0E;
+	margin-top : 8%;
+	font-size : 25pt;
+}
+
 #background{
 	text-align: center;
 	position:center;
@@ -63,8 +70,4 @@ h1{
 #background img{
 	width : auto;
 	height : 114px;
-}
-
-a{
-	text-decoration: none;
 }
