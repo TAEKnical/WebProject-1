@@ -1,0 +1,88 @@
+.qna {
+	width: 650px;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.ask-header {
+	text-align: center;
+	vertical-align: center;
+}
+.ask-header h1 {
+	font-size: 15px;
+}
+
+.ask-form textarea {
+	width: 650px;
+}
+
+.send-button {
+	text-align: right;
+	background-color: white;
+}
+
+.question-item_title h1 {
+	font-size: 20px;
+}
+
+.question-list {
+	background-color: white;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	width: 650px;
+}
+
+.question-item_header_icon {
+	width: 30px;
+	height: 30px;
+	float: left;
+	text-align: left;
+}
+
+.question-item_header_icon image {
+	width: 30px;
+	height: 30px;
+	float: left;
+	clear: left;
+	overflow: hidden;
+}
+
+.question-item_header_top {
+	margin-left: 20px;
+	padding-left: 20px;
+	font-weight: bold;
+}
+
+.question-item_writer {
+	text-align: left;
+}
+
+.question-item_date {
+	text-align: left;
+	margin-left: 20px;
+	padding-left: 20px;
+	font-size: 13px;
+	color: gray;
+}
+
+.question-item_body {
+	text-align: left;
+	padding-left: 5px;	
+}
+
+.question-item_body span {
+	text-align: left;
+
+}
+
+.question-item {
+	/*margin: 10px;*/
+	padding: 10px;
+	display: inline-block;
+	width: 650px;
+	margin-left: auto;
+	margin-right: auto;
+	border-bottom: thin solid gray;
+}
