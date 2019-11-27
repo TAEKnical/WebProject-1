@@ -5,8 +5,8 @@
 	<meta charset="utf-8" />
 	<title>Software Engineering Lab - QnA</title>
 	
-	<link rel="stylesheet" href="../index.css?var=1" type="text/css" />
-	<link rel="stylesheet" href="../sidebar.css?var=1">
+	<link rel="stylesheet" href="../common/css/index.css?var=1" type="text/css" />
+	<link rel="stylesheet" href="../common/css/sidebar.css?var=1">
 	<link rel="stylesheet" href="./qna.css" type="text/css" />
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
