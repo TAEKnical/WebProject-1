@@ -6,13 +6,13 @@
 
 	<meta charset="utf-8" />
 
-	<title>Signup page</title>
+	<title>Login page</title>
 
-	<link rel="stylesheet" href="./css/signup.css?var=1" type="text/css" />
+	<link rel="stylesheet" href="./css/login.css?var=1" type="text/css" />
 
 	<link rel="stylesheet" href="../common/css/sidebar.css?var=1">
 
-	
+		
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
@@ -60,27 +60,28 @@
 
 			</ul>
 
-		</div>
-
 		<button>● ● ●</button>
 
 	</aside>
 
  
 
-	<article>
-		<form method='post' action="./signup_check.php">
+	<div class=box>
+
 		<div class="container">
 
-			<h1>Sign up</h1>
+			<h1>Login</h1>
 
-			
+			<?php
+			if($_SESSION['id']==null){
+			?>
 
+			<form method='post' action="./login_check.php">
 			<div class="label">아이디</div>
 
 			<div class="form">
 
-				<input type="text" id="id" placeholder="ID" name="id" />
+				<input type="text" id="id" placeholder="ID" name='inputid'/>
 
 			</div>
 
@@ -90,41 +91,27 @@
 
 			<div class="form">
 
-				<input type="password" id="pw" placeholder="PW" name="pw"/>
+				<input type="password" id="pw" placeholder="PW" name='inputpw'/>
 
 			</div>
 
- 
+			<br>
 
-			<div class="label">이름</div>
+			<input id="signup" type="submit" value="login"/>
+			</form>
+			<?php
+			}else{
+				echo "<center><br><br><br>";
+   				echo $_SESSION['name']."(".$_SESSION['id'].")님이 로그인 하였습니다.";
+   				echo "&nbsp;<a href='logout.php'><input type='button' value='Logout'></a>";
+   				echo "</center>";
+			}
+			?>
+			<a href="./signup.html"><button id="signup">회원가입</button></a>
 
-			<div class="form">
-
-				<input type="text" id="name" placeholder="NAME" name="name"/>
-
-			</div>
-
- 
-
-			<div class="label">이메일</div>
-
-			<div class="form">
-
-				<input type="text" id="email" placeholder="EMAIL" name="email"/>
-
-			</div>
-
- 
-
-			<button id="signup">가입하기</button>
-			
 		</div>
-	</form>
-	</article>
 
- 
-
- 
+	</div>
 
  
 
