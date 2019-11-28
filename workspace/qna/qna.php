@@ -7,7 +7,7 @@
 	
 	<link rel="stylesheet" href="../common/css/index.css?var=1" type="text/css" />
 	<link rel="stylesheet" href="../common/css/sidebar.css?var=1">
-	<link rel="stylesheet" href="./qna.css" type="text/css" />
+	<link rel="stylesheet" href="./qna.css?var=1" type="text/css" />
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -58,22 +58,7 @@
 
 	<article>
 		<div class="qna">
-			<div class="ask">
-				<div class="ask-header">
-					<h1>교수님께 질문하기</h1>
-				</div>
 
-				<form action="./add_question.php" method="post">
-					<div class="ask-form">
-						<textarea name="ask-content" placeholder="질문 내용을 입력하세요.(200자 이내)" maxlength="200"></textarea>
-					</div>
-
-					<div class="send-button">
-						<button type="submit">질문 등록</button>
-					</div>
-				</form>				
-			</div>
-			
 			<div class="question-item_title">
 					<h1>질문 목록(<?= $count ?>개)</h1>
 			</div>
@@ -101,6 +86,25 @@
 				<?php } ?>
 			</div>
 		</div>
+
+		<div class="ask">
+			<div class="ask-header">
+				<h1>교수님께 질문하기</h1>
+			</div>
+
+			<form action="./add_question.php" method="post">
+				<div class="ask-form">
+					<textarea name="ask-content" placeholder="질문 내용을 입력하세요.(200자 이내)" maxlength="200" rows=5 cols=30></textarea>
+
+					<div class="submit">
+            			<input type=submit value="제출하기" id="button-blue"/>
+            			<div class="ease"></div>
+       				</div>
+
+				</div>
+			</form>				
+		</div>
+
 	</article>
 
 	<footer role="contentinfo">
