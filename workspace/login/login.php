@@ -10,7 +10,7 @@
 
 	<link rel="stylesheet" href="./css/login.css?var=1" type="text/css" />
 
-	<link rel="stylesheet" href="../common/css/sidebar.css?var=1">
+	<link rel="stylesheet" href="../common/css/sidebar.css?var=2">
 
 		
 
@@ -40,11 +40,11 @@
 
 			<ul>
 
-				<li><a href="./login.html">Login</a></li>
+				<li><a href="./login.php">Login</a></li>
 
 				<br><br>
 
-				<li><a href="../login/login.html">NOTICE</a></li>
+				<li><a href="../login/login.php">NOTICE</a></li>
 
 				<li><a href="../login/login.html">RESEARCH</a></li>
 

@@ -10,60 +10,57 @@
 
 	<body>
 		<h1>My Music Page</h1>
-		
+
 		<!-- Ex 1: Number of Songs (Variables) -->
-		<?php $song_count = 5678; ?>
 		<p>
 			I love music.
-			I have <?= $song_count ?> total songs,
-			which is over <?= (int)($song_count / 10) ?> hours of music!
+			I have <?php
+				$song_count = 5678;
+				echo "{$song_count}";
+			?> total songs,
+			which is over <?php
+				$song_hours = 5678/10;
+				$song_hours = (int)$song_hours;
+				echo "{$song_hours}";
+			?> hours of music!
 		</p>
 
 		<!-- Ex 2: Top Music News (Loops) -->
 		<!-- Ex 3: Query Variable -->
-		<?php $news_pages = $_GET["newspages"]; ?>
 		<div class="section">
 			<h2>Billboard News</h2>
+		
 			<ol>
-				<?php 
-					if ($news_pages !== NULL) {
-						for ($i = 11; $i > 11 - $news_pages; $i--) {
-							if ($i < 10) { ?>
-								<li><a href="https://www.billboard.com/archive/article/20190<?= $i ?>">2019-0<?= $i ?></a></li>
-							<?php }
-							else { ?>
-								<li><a href="https://www.billboard.com/archive/article/2019<?= $i ?>">2019-<?= $i ?></a></li>
-							<?php } ?>
-						<?php } ?>
-					<?php }
+				<?php
+					$s1 = '<li><a href="https://www.billboard.com/archive/article/2019';
+					$s2 = '">2019-';
+					$s3 = '</a></li>';
+					
+					$news_pages = $_GET["news_pages"];
 
-					else {
-						for ($i = 11; $i > 6; $i--) {
-							if ($i < 10) { ?>
-								<li><a href="https://www.billboard.com/archive/article/20190<?= $i ?>">2019-0<?= $i ?></a></li>
-							<?php }
-							else { ?>
-								<li><a href="https://www.billboard.com/archive/article/2019<?= $i ?>">2019-<?= $i ?></a></li>
-							<?php } ?>							
-						<?php } ?>
-					<?php } ?>
+					for($i=0;$i<$news_pages;$i++){
+				?>
+				<li><a href="https://www.billboard.com/archive/article/2019
+					<?= sprintf('%02d',11 - $i) ?>
+					"> 2019-
+					<?= sprintf('%02d',11 - $i) ?> </a></li>
+				<?php	}	?>
 			</ol>
 		</div>
 
 		<!-- Ex 4: Favorite Artists (Arrays) -->
-		<!--<?php
-			$artists = array("Guns N' Roses", "Green Day", "Blink 182", "The Cranberries", "Bruno Mars", "Amy Winehouse", "Jason Mraz");
-		?>-->
-
 		<!-- Ex 5: Favorite Artists from a File (Files) -->
-		<?php $artists = file("favorite.txt"); ?>
 		<div class="section">
 			<h2>My Favorite Artists</h2>
+		
 			<ol>
-				<?php 
-					foreach ($artists as $artist) { ?>
-						<li><a href="http://en.wikipedia.org/wiki/<?= $artist ?>"><?= $artist ?></a></li>
-				<?php } ?>				
+				<?php
+					$i = 1;
+					foreach(file("favorite.txt") as $data){
+				?>
+					<li><a href = "http://en.wikipedia.org/wiki/<? echo "$data"; ?>">
+						<? echo "$data<br>"; } ?>
+					</a></li>
 			</ol>
 		</div>
 		
@@ -71,43 +68,29 @@
 		<!-- Ex 7: MP3 Formatting -->
 		<div class="section">
 			<h2>My Music and Playlists</h2>
-			<?php
-				$songs = glob("lab5\musicPHP\songs\*.mp3");
-				shuffle($songs);
-			?>
+
 			<ul id="musiclist">
-				<?php
-					foreach ($songs as $song) { ?>
 				<li class="mp3item">
-					<a href="<?= $song ?>"><?= basename($song) ?></a> (<?= (int)(filesize($song) / 1024) ?> KB)
+					<a href="lab5/musicPHP/songs/paradise-city.mp3">paradise-city.mp3</a>
 				</li>
-				<?php } ?>
+				
+				<li class="mp3item">
+					<a href="lab5/musicPHP/songs/basket-case.mp3">basket-case.mp3</a>
+				</li>
+
+				<li class="mp3item">
+					<a href="lab5/musicPHP/songs/all-the-small-things.mp3">all-the-small-things.mp3</a>
+				</li>
 
 				<!-- Exercise 8: Playlists (Files) -->
-				<?php
-					$playlists = glob("lab5\musicPHP\songs\*.m3u");
-					shuffle($playlists);
-					foreach ($playlists as $playlist) { ?>
-						<li class="playlistitem"><?= basename($playlist) ?>:
-							<ul>
-								<?php
-									$list = file($playlist);
-									$mp3_list = array();
-									foreach ($list as $item) {
-										$pos = strpos($item, ".mp3");
-										if ($pos !== false) {
-											array_push($mp3_list, $item);
-										}
-									}
-									shuffle($mp3_list);
-								?>
-
-								<?php foreach ($mp3_list as $item) { ?>
-									<li><?= $item ?></li>
-								<?php } ?>
-							</ul>
-						</li>
-					<?php } ?>
+				<li class="playlistitem">326-13f-mix.m3u:
+					<ul>
+						<li>Basket Case.mp3</li>
+						<li>All the Small Things.mp3</li>
+						<li>Just the Way You Are.mp3</li>
+						<li>Pradise City.mp3</li>
+						<li>Dreams.mp3</li>
+					</ul>
 			</ul>
 		</div>
 
