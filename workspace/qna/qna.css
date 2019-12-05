@@ -1,6 +1,4 @@
-body{
-	background-color: #28AEFF;
-}
+
 
 .ask-header {
 	text-align: center;
@@ -84,7 +82,7 @@ body{
 
 .ask {
 	background-color: #a0a0a0;
-    padding:5px 35px 50px;
+    padding:35px 35px 50px;
     width: 700px;
     margin-top:30px;
     -moz-border-radius: 15px;
@@ -103,15 +101,13 @@ body{
 	background-color: #a0a0a0;
     padding:35px 35px 50px;
     width: 700px;
-    
     -moz-border-radius: 15px;
     -webkit-border-radius: 15px;
     text-align: center;
-    margin-top : 10%;
+
     position : absolute;
     left : 50%;
     margin-left : -350px;
-    
 }
 
 .ask-form{
@@ -175,28 +171,9 @@ body{
 
 .question-list{
 	border-radius: 25px;
-	overflow-y : scroll;
-	overflow-x : hidden;
-	height : 300px;
 }
 
 textarea{
 	border-radius : 10px;
 	outline : none;
-}
-
-
-#background{
-	text-align: center;
-	top:5%;
-	color:white;
-
-	position : absolute;
-	left : 50%;
-	margin-left : -100px;
-}
-
-#background img{
-	width : auto;
-	height : 114px;
 }
