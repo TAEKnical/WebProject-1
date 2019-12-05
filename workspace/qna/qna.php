@@ -5,8 +5,9 @@
 	<meta charset="utf-8" />
 	<title>Software Engineering Lab - QnA</title>
 	
-	<link rel="stylesheet" href="../common/css/sidebar.css?var=2">
-	<link rel="stylesheet" href="./qna.css?var=3" type="text/css" />
+	<link rel="stylesheet" href="../common/css/index.css?var=1" type="text/css" />
+	<link rel="stylesheet" href="../common/css/sidebar.css?var=1">
+	<link rel="stylesheet" href="./qna.css?var=1" type="text/css" />
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -32,29 +33,25 @@
 <body>
 	<?php
 		// DB Server Connection
-		$connection = new PDO("mysql:dbname=qna;host=localhost", "root", "root");
+		$connection = new PDO("mysql:dbname=qna;host=localhost", "root");
 		$rows = $connection->query("SELECT * FROM question ORDER BY created DESC;");
 		// 질문 갯수
 		$count = $rows->rowCount(); ?>
 			
 	<header>
-		<div id=background>
-			<a href="../index.html"><img src=../common/images/selab_logo_S.png height=114px width=auto></a>
-		</div>
 	</header>
-
 	<aside id="sidebar">
 		<div>
 			<ul>
-				<li><a href="../login/login.php">Login</a></li>
+				<li>Login</li>
 				<br><br>
-				<li><a href="./login/login.html">NOTICE</a></li>
-				<li><a href="./login/login.html">RESEARCH</a></li>
-				<li><a href="./login/login.html">PUBLICATIONS</a></li>
-				<li><a href="./login/login.html">COURSES</a></li>
-				<li><a href="./login/login.html">GALLERY</a></li>
-				<li><a href="./qna/qna.php">QnA</a></li>
-				<li><a href="./login/login.html">CONTACT</a></li>
+				<li>NOTICE</li>
+				<li>RESEARCH</li>
+				<li>PUBLICATIONS</li>
+				<li>COURSES</li>
+				<li>GALLERY</li>
+				<li><a href="./qna.php">QnA</a></li>
+				<li>CONTACT</li>
 			</ul>
 		<button>● ● ●</button>
 	</aside>
@@ -77,8 +74,30 @@
 								</div>
 
 								<div class="question-item_header_top">
-									<div class="question-item_writer"><?= $row["writer"] ?></div>
+									<?php
+										if ($row["checked"] == 0) { ?>
+											<form action="./checked.php" method="post">
+												<input type="hidden" value="<?= $row["writer"] ?>" name="writer">
+												<input type="hidden" value="<?= $row["created"] ?>" name="created">
+												<div class="question-item_writer"><?= $row["writer"] ?> 
+												<input type="submit" value="답변 완료" name="check">
+												</div>
+											</form>
+									<?php } else { ?>
+										<form action="./unchecked.php" method="post">
+											<input type="hidden" value="<?= $row["writer"] ?>" name="writer">
+											<input type="hidden" value="<?= $row["created"] ?>" name="created">
+											<div class="question-item_writer"><?= $row["writer"] ?> 
+											<input type="submit" value="체크 취소" name="uncheck"></div>	
+										</form>										
+									<?php } ?>
+								<form action="./delete.php" method="post">
+									<input type="hidden" value="<?= $row["id"] ?>" name="id">
+									<input type="submit" value="삭제" name="delete">
+								</form>
+									
 								</div>
+
 								<div class="question-item_date"><?= $row["created"] ?></div>
 							</div>
 							
