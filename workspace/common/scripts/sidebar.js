@@ -19,7 +19,6 @@ $(function(){
     var windowWidth = $( window ).width();
     var $side = $('#sidebar');
     var background = document.getElementById("background");
-    var bnlist = document.getElementById("bnlist");
     var $sidebt = $side.find('button').on('click', function(){
         $side.toggleClass('open');
 
@@ -27,12 +26,10 @@ $(function(){
             $side.stop(true).animate({left:'0px'}, duration);
             if(window.innerWidth < 1000){
                     background.style.display = 'none';
-                    bnlist.style.display = 'none';
                 }
         }else{
             $side.stop(true).animate({left:'-300px'}, duration);
             background.style.display = 'block';
-            bnlist.style.display = 'block';
         };
     });
 });
