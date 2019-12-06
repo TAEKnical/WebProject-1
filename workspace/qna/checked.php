@@ -8,7 +8,7 @@
 
 	//$check = $_POST[""]
 	// DB Server Connection
-	$connection = new PDO("mysql:dbname=qna;host=localhost", "root");
+	$connection = new PDO("mysql:dbname=qna;host=localhost", "root", "root");
 	
 	$created = $connection->quote($created);
 	$writer = $connection->quote($writer);

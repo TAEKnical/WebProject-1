@@ -6,7 +6,7 @@
 	$date = date("Y-m-d H:i:s");
 
 	// DB Server Connection
-	$connection = new PDO("mysql:dbname=qna;host=localhost", "root");
+	$connection = new PDO("mysql:dbname=qna;host=localhost", "root", "root");
 	
 	// 질문 내용이 null이 아니면 작성자, 내용, 시간을 table에 넣은 후 새로 고침한다. 질문 내용이 null이면 새로 고침만 한다.
 	if ($content != null) {

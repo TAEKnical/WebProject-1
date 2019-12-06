@@ -33,7 +33,7 @@
 <body>
 	<?php
 		// DB Server Connection
-		$connection = new PDO("mysql:dbname=qna;host=localhost", "root");
+		$connection = new PDO("mysql:dbname=qna;host=localhost", "root", "root");
 		$rows = $connection->query("SELECT * FROM question ORDER BY created DESC;");
 		// 질문 갯수
 		$count = $rows->rowCount(); ?>

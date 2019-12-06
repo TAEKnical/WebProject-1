@@ -10,7 +10,7 @@
 
 	<link rel="stylesheet" href="./css/login.css?var=1" type="text/css" />
 
-	<link rel="stylesheet" href="../common/css/sidebar.css?var=2">
+	<link rel="stylesheet" href="../common/css/sidebar.css?var=1">
 
 		
 
@@ -40,11 +40,11 @@
 
 			<ul>
 
-				<li><a href="./login.php">Login</a></li>
+				<li><a href="./login.html">Login</a></li>
 
 				<br><br>
 
-				<li><a href="../login/login.php">NOTICE</a></li>
+				<li><a href="../login/login.html">NOTICE</a></li>
 
 				<li><a href="../login/login.html">RESEARCH</a></li>
 
@@ -73,6 +73,7 @@
 			<h1>Login</h1>
 
 			<?php
+			session_start();
 			if($_SESSION['id']==null){
 			?>
 
@@ -102,6 +103,7 @@
 			<?php
 			}else{
 				echo "<center><br><br><br>";
+   				// echo $_SESSION['name']."(".$_SESSION['id'].")님이 로그인 하였습니다.";
    				echo $_SESSION['name']."(".$_SESSION['id'].")님이 로그인 하였습니다.";
    				echo "&nbsp;<a href='logout.php'><input type='button' value='Logout'></a>";
    				echo "</center>";
