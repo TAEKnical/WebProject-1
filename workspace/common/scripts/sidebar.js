@@ -19,6 +19,9 @@ $(function(){
     var windowWidth = $( window ).width();
     var $side = $('#sidebar');
     var background = document.getElementById("background");
+    var box = document.getElementById("box");
+    var askbox = document.getElementById("ask_box");
+    var qnabox = document.getElementById("qna_box");
     var $sidebt = $side.find('button').on('click', function(){
         $side.toggleClass('open');
 
@@ -26,10 +29,17 @@ $(function(){
             $side.stop(true).animate({left:'0px'}, duration);
             if(window.innerWidth < 1000){
                     background.style.display = 'none';
+                    box.style.display = 'none';
+                    qnabox.style.display = 'none';
+                    askbox.style.display = 'none';
+
                 }
         }else{
             $side.stop(true).animate({left:'-300px'}, duration);
             background.style.display = 'block';
+            bnlist.style.display = 'block';
+            qnabox.style.display = 'block';
+            askbox.style.display = 'block';
         };
     });
 });

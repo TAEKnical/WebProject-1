@@ -11,7 +11,10 @@
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 	<script src="./common/scripts/sidebar.js" type="text/javascript"></script>
+	<script src="./common/scripts/home.js" type="text/javascript"></script>
+	<script src="./common/scripts/unslider.js" type="text/javascript"></script>
 
 
 </head>
@@ -22,15 +25,15 @@
 	<aside id="sidebar">
 		<div>
 			<ul>
-				<li><a href="./login/login.php">Login</a></li>
+				<li><a href="./login/login.html">Login</a></li>
 				<br><br>
-				<li><a href="./login/login.php">NOTICE</a></li>
-				<li><a href="./login/login.php">RESEARCH</a></li>
-				<li><a href="./login/login.php">PUBLICATIONS</a></li>
-				<li><a href="./login/login.php">COURSES</a></li>
-				<li><a href="./login/login.php">GALLERY</a></li>
+				<li><a href="./login/login.html">NOTICE</a></li>
+				<li><a href="./login/login.html">RESEARCH</a></li>
+				<li><a href="./login/login.html">PUBLICATIONS</a></li>
+				<li><a href="./login/login.html">COURSES</a></li>
+				<li><a href="./login/login.html">GALLERY</a></li>
 				<li><a href="./qna/qna.php">QnA</a></li>
-				<li><a href="./login/login.php">CONTACT</a></li>
+				<li><a href="./login/login.html">CONTACT</a></li>
 			</ul>
 		<button>● ● ●</button>
 	</aside>
@@ -41,7 +44,16 @@
 			<a href="./index.html"><img src=./common/images/selab_logo_S.png onmouseover="this.src='./common/images/hanyang_logo.png'" onmouseout="this.src='./common/images/selab_logo_S.png'"></a>
 			<p>@HYU ERICA</p>
 		</div>
-	</article> +-
+		<div class="contents" id="box">
+			<div class="banner has-dots" style="overflow: hidden; width: 1145px; height: 400px;">
+				<ul id = "bnlist" style="width: 300%; position: relative; left: 0%; height: 400px;">
+					<li id="img1" style="width: 33.3333%;"></li>
+					<li id="img2" style="width: 33.3333%;"></li>
+					<li id="img3" style="width: 33.3333%;"></li>
+				</ul>
+			</div>
+		</div>
+	</article>
 	<footer role="contentinfo">
 		<div class="container">
 		</div>

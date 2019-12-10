@@ -60,7 +60,7 @@
 	</aside>
 
 	<article>
-		<div class="qna">
+		<div class="qna" id = "qna_box">
 
 			<div class="question-item_title">
 					<h1>질문 목록(<?= $count ?>개)</h1>
@@ -114,7 +114,7 @@
 			</div>
 		</div>
 
-		<div class="ask">
+		<div class="ask" id = "ask_box">
 			<div class="ask-header">
 				<h1>교수님께 질문하기</h1>
 			</div>
