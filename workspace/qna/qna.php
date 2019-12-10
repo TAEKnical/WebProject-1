@@ -1,3 +1,6 @@
+<?php
+	session_start();
+?>
 <!DOCTYPE html>
 <html>
 		<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
@@ -43,23 +46,15 @@
 	<aside id="sidebar">
 		<div>
 			<ul>
-				<li><a href="../login/login.php">Login</a></li>
-
+				<li>Login</li>
 				<br><br>
-
-				<li><a href="../login/login.php">NOTICE</a></li>
-
-				<li><a href="../login/login.php">RESEARCH</a></li>
-
-				<li><a href="../login/login.php">PUBLICATIONS</a></li>
-
-				<li><a href="../login/login.php">COURSES</a></li>
-
-				<li><a href="../login/login.php">GALLERY</a></li>
-
-				<li><a href="../qna/qna.php">QnA</a></li>
-
-				<li><a href="../login/login.php">CONTACT</a></li>
+				<li>NOTICE</li>
+				<li>RESEARCH</li>
+				<li>PUBLICATIONS</li>
+				<li>COURSES</li>
+				<li>GALLERY</li>
+				<li><a href="./qna.php">QnA</a></li>
+				<li>CONTACT</li>
 			</ul>
 		<button>● ● ●</button>
 	</aside>
@@ -100,11 +95,11 @@
 										</form>										
 									<?php } ?>
 								<form action="./delete.php" method="post">
-			                       <input type="hidden" value="<?= $row["user_id"] ?>" name="user_id">
-			                       <input type="hidden" value="<?= $row["created"] ?>" name="created">
-			                       <input type="hidden" value="<?= $row["writer"] ?>" name="writer">
-			                       <input type="submit" value="삭제" name="delete">
-                        		</form>	
+									<input type="hidden" value="<?= $row["user_id"] ?>" name="user_id">
+									<input type="hidden" value="<?= $row["created"] ?>" name="created">
+									<input type="hidden" value="<?= $row["writer"] ?>" name="writer">
+									<input type="submit" value="삭제" name="delete">
+								</form>
 									
 								</div>
 
