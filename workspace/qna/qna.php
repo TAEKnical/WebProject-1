@@ -43,15 +43,23 @@
 	<aside id="sidebar">
 		<div>
 			<ul>
-				<li>Login</li>
+				<li><a href="../login/login.php">Login</a></li>
+
 				<br><br>
-				<li>NOTICE</li>
-				<li>RESEARCH</li>
-				<li>PUBLICATIONS</li>
-				<li>COURSES</li>
-				<li>GALLERY</li>
-				<li><a href="./qna.php">QnA</a></li>
-				<li>CONTACT</li>
+
+				<li><a href="../login/login.php">NOTICE</a></li>
+
+				<li><a href="../login/login.php">RESEARCH</a></li>
+
+				<li><a href="../login/login.php">PUBLICATIONS</a></li>
+
+				<li><a href="../login/login.php">COURSES</a></li>
+
+				<li><a href="../login/login.php">GALLERY</a></li>
+
+				<li><a href="../qna/qna.php">QnA</a></li>
+
+				<li><a href="../login/login.php">CONTACT</a></li>
 			</ul>
 		<button>● ● ●</button>
 	</aside>

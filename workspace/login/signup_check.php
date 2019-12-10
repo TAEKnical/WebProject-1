@@ -10,6 +10,7 @@ include("connect.php");
 	$email = $_POST["email"];
 	if($id != null && $pw != null && $name != null && $email != null)
 	{	
+		
 		$sql = "SELECT * FROM info WHERE $id='{$id}'";
 		$query = "INSERT INTO info (id,pw,name,email) VALUES ($id, $pw, $name, $email)";
 

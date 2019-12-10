@@ -40,23 +40,23 @@
 
 			<ul>
 
-				<li><a href="./login.html">Login</a></li>
+				<li><a href="./login.php">Login</a></li>
 
 				<br><br>
 
-				<li><a href="../login/login.html">NOTICE</a></li>
+				<li><a href="../login/login.php">NOTICE</a></li>
 
-				<li><a href="../login/login.html">RESEARCH</a></li>
+				<li><a href="../login/login.php">RESEARCH</a></li>
 
-				<li><a href="../login/login.html">PUBLICATIONS</a></li>
+				<li><a href="../login/login.php">PUBLICATIONS</a></li>
 
-				<li><a href="../login/login.html">COURSES</a></li>
+				<li><a href="../login/login.php">COURSES</a></li>
 
-				<li><a href="../login/login.html">GALLERY</a></li>
+				<li><a href="../login/login.php">GALLERY</a></li>
 
 				<li><a href="../qna/qna.php">QnA</a></li>
 
-				<li><a href="../login/login.html">CONTACT</a></li>
+				<li><a href="../login/login.php">CONTACT</a></li>
 
 			</ul>
 

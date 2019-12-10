@@ -26,7 +26,7 @@ try {
 	if($login_ok){
 		$_SESSION['id']=$row['id'];
 				$_SESSION['name']=$row['name'];	
-				echo "<script>location.href='signup.html';</script>";
+				echo "<script>location.href='login.php';</script>";
 							echo "<script>histroy.back();</script>";
 						// echo "<script>location.href='qna/qna.php';</script>";
 				// echo $_SESSION['name'];
