@@ -100,9 +100,11 @@
 										</form>										
 									<?php } ?>
 								<form action="./delete.php" method="post">
-									<input type="hidden" value="<?= $row["id"] ?>" name="id">
-									<input type="submit" value="삭제" name="delete">
-								</form>
+			                       <input type="hidden" value="<?= $row["user_id"] ?>" name="user_id">
+			                       <input type="hidden" value="<?= $row["created"] ?>" name="created">
+			                       <input type="hidden" value="<?= $row["writer"] ?>" name="writer">
+			                       <input type="submit" value="삭제" name="delete">
+                        		</form>	
 									
 								</div>
 
