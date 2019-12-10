@@ -13,11 +13,11 @@
 		$created = $_POST["created"];
 	
 		// qna.php에서 값 넘어오는것 확인용(삭제 금지)
-		/*
-		print $user_id;
-		print $writer;
-		print $created;
-		*/
+		
+		// print $user_id;
+		// print $writer;
+		// print $created;
+		
 		
 		$connection = new PDO("mysql:dbname=qna;host=localhost", "root", "root");
 		
@@ -32,7 +32,7 @@
 			echo "<script>var delConfirm = confirm('질문을 삭제하시면 삭제한 질문은 복구할 수 없습니다.\n\n질문을 삭제하시겠습니까?');</script>";
 			echo "<script>if (delConfirm) {</script>";		
 			echo "<script>} else {</script>";
-			//echo "<script>location.href='./qna.php';</script>";
+			echo "<script>location.href='./qna.php';</script>";
 			echo "<script>}</script>";	
 			*/
 			} else {
