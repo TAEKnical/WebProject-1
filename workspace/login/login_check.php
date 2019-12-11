@@ -1,6 +1,6 @@
 <?php
-session_start();
-include ("connect.php");
+	session_start();
+	include ("connect.php");
 	$login_ok = false;
 	$id = $_POST["inputid"];
 	$pw = $_POST["inputpw"];
@@ -8,26 +8,26 @@ include ("connect.php");
 	$query = "select * from info where id='$id' and pw='$pw'";
 	// $result = mysqli_query($con, $query);
 	// $row = mysqli_fetch_array($result);
-try { 
-				$stmt = $con->prepare('select * from info where id=:id');
-				$stmt->bindParam(':id', $id);
-				$stmt->execute();
-			   
-			} catch(PDOException $e) {
-				die("Database error. " . $e->getMessage()); 
-			}
+	try {
+		$stmt = $con->prepare('select * from info where id=:id');
+		$stmt->bindParam(':id', $id);
+		$stmt->execute();
+	} catch(PDOException $e) {
+		die("Database error. " . $e->getMessage());
+	}
 
-			$row = $stmt->fetch();  
-			$password = $row['pw'];
-			if ( $pw == $password) {
-				$login_ok = true;
-			}
+	$row = $stmt->fetch();  
+	$password = $row['pw'];
+	if ($pw == $password) {
+		$login_ok = true;
+	}
 
 	if($login_ok){
 		$_SESSION['id']=$row['id'];
-				$_SESSION['name']=$row['name'];	
-				echo "<script>location.href='login.php';</script>";
-							echo "<script>histroy.back();</script>";
+		$_SESSION['name']=$row['name'];	
+		header("Location: ../main.php");
+		//echo "<script>location.href='login.php';</script>";
+		//echo "<script>histroy.back();</script>";
 						// echo "<script>location.href='qna/qna.php';</script>";
 				// echo $_SESSION['name'];
 				// header("Location : qna.php?name=writer");
