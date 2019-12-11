@@ -46,7 +46,12 @@
 	<aside id="sidebar">
 		<div>
 			<ul>
-				<li>Login</li>
+				<?php 
+					if ($_SESSION['id'] != null) { ?>
+				<li><a href="../login/logout.php">Logout</a></li>
+				<?php } else { ?>
+					<li><a href="../login/login.php">Login</a></li>
+				<?php } ?>
 				<br><br>
 				<li>NOTICE</li>
 				<li>RESEARCH</li>
