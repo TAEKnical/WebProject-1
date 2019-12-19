@@ -69,6 +69,51 @@
 
 			<div class="question-item_title">
 					<h1>질문 목록(<?= $count ?>개)</h1>
+
+
+					<!-- 추가된부분! -->
+
+
+					<button id="but">notification</button>
+					<script>
+					    window.addEventListener("load",c);
+					    
+					    function init(){
+					    var b=document.getElementById("but");
+					    b.addEventListener("click",noti,false);
+					    }
+					    
+					    
+					    function c(){
+					    init();
+					    if(window.Notification && Notification.permission!=="granted"){
+					    
+					    Notification.requestPermission(function(status){
+					    if(Notification.permission!==status){
+					    Notification.permission=status;
+					    }
+					    })
+					    }
+					    }
+					    
+					    function noti(){
+					    if(Notification.permission=="granted"){
+					    var title="질문글";
+					    var options={
+					    body:"새로운 질문글이 올라왔습니다!"
+					     
+					    }
+					 noti= new Notification(title,options);
+					   
+					 }
+					 else{
+					 alert("알림 허용이 되지 않았습니다!");
+					 }
+					 
+					 
+					}
+    				</script>
+
 			</div>
 			
 			<div class="question-list">
