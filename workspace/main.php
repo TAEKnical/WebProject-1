@@ -9,8 +9,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Software Engineering Lab - Notice</title>
 	
-	<link rel="stylesheet" href="./common/css/index.css?var=1" type="text/css" />
-	<link rel="stylesheet" href="./common/css/sidebar.css?var=1">
+	<link rel="stylesheet" href="./common/css/index.css?var=6" type="text/css" />
+	<link rel="stylesheet" href="./common/css/sidebar.css?var=6">
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -28,15 +28,15 @@
 	<aside id="sidebar">
 		<div>
 			<ul>
-				<li><a href="./login/logout.php">Logout</a></li>
+				<li><a href="./login/login.php">Logout</a></li>
 				<br><br>
-				<li><a href="./login/login.html">NOTICE</a></li>
-				<li><a href="./login/login.html">RESEARCH</a></li>
-				<li><a href="./login/login.html">PUBLICATIONS</a></li>
-				<li><a href="./login/login.html">COURSES</a></li>
-				<li><a href="./login/login.html">GALLERY</a></li>
+				<li><a href="./qna/qna.php">NOTICE</a></li>
+				<li><a href="./qna/qna.php">RESEARCH</a></li>
+				<li><a href="./qna/qna.php">PUBLICATIONS</a></li>
+				<li><a href="./qna/qna.php">COURSES</a></li>
+				<li><a href="./qna/qna.php">GALLERY</a></li>
 				<li><a href="./qna/qna.php">QnA</a></li>
-				<li><a href="./login/login.html">CONTACT</a></li>
+				<li><a href="./qna/qna.php">CONTACT</a></li>
 			</ul>
 		<button>● ● ●</button>
 	</aside>
@@ -45,21 +45,22 @@
 		<div id=background>
 			<p>Welcome to Software Engineering Laboratory!</p>
 			<a href="./index.html"><img src=./common/images/selab_logo_S.png onmouseover="this.src='./common/images/hanyang_logo.png'" onmouseout="this.src='./common/images/selab_logo_S.png'"></a>
-			<p>@HYU ERICA</p>
-		</div>
-		<div class="contents" id="box">
-			<div class="banner has-dots" style="overflow: hidden; width: 1145px; height: 400px;">
-				<ul id = "bnlist" style="width: 300%; position: relative; left: 0%; height: 400px;">
-					<li id="img1" style="width: 33.3333%;"></li>
-					<li id="img2" style="width: 33.3333%;"></li>
-					<li id="img3" style="width: 33.3333%;"></li>
-				</ul>
+			
+			<div class="contents" id="box">
+				<div class="banner has-dots" style="overflow: hidden; width: 700px; height: 300px;">
+					<ul id = "bnlist" style="width: 300%; position: relative; left: 0%; height: 300px;">
+						<li id="img1" style="width: 33.3333%;"></li>
+						<li id="img2" style="width: 33.3333%;"></li>
+						<li id="img3" style="width: 33.3333%;"></li>
+					</ul>
+				</div>
 			</div>
+		</div>
+		<div id="copyright">
 		</div>
 	</article>
 	<footer role="contentinfo">
-		<div class="container">
-		</div>
+
 	</footer>
 </body>
 </html>
