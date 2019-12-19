@@ -53,6 +53,7 @@
 					<li><a href="../login/login.php">Login</a></li>
 				<?php } ?>
 				<br><br>
+				<li><a href="../main.php">HOME</a></li>
 				<li>NOTICE</li>
 				<li>RESEARCH</li>
 				<li>PUBLICATIONS</li>
